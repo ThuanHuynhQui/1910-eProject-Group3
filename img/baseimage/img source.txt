@@ -1,0 +1,12 @@
+Logo: https://www.pinterest.com/pin/147915168985740763/?lp=true
+img1: https://www.microsoft.com/en-in/p/kindergarten-kids-learning-premium/9wzdncrdcm6h?activetab=pivot:overviewtab
+banner: https://mykidslachildcare.com/
+math: https://appadvice.com/app/kids-learning-vocabulary-numbers-shapes-symbols/1239305914
+ABC: https://apkmagic.com.ar/2018/10/super-abc-learning-games-for-kids-preschool-apps-v1-1-1-1-%D1%8C-mod-unlocked-apk-latest/
+number: https://appadvice.com/app/wee-sing-learn-123-preschool-counting-number-learning/657472038
+animal: https://appadvice.com/app/animal-learning-for-kids/1470588521
+color: https://appadvice.com/app/learning-colors-for-kids-fun-color-learn/1228278968
+month: https://appadvice.com/app/learning-days-of-week-and-12-months-of-the-year/1073318965
+week: https://apkpure.ai/7-days-a-week-learning.amp
+vegetable: https://appadvice.com/app/learning-fruits-vegetables/811237950
+background: https://pngtree.com/freebackground/park-play-kids-advertising-background_970667.html

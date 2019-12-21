@@ -1,0 +1,12 @@
+.logo
+{
+    width: 128px;
+}
+
+header > h1{
+    float: right;
+}
+.jumbotron{
+    background-color: rgb(183, 117, 245);
+}
+
