@@ -15,3 +15,7 @@ footer{
     text-align: center;
     background-color: rgb(135, 163, 248) ;
 }
+
+li{
+    margin: 0 87px;
+}
