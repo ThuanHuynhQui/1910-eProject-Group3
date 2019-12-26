@@ -16,6 +16,11 @@ footer{
     background-color: rgb(135, 163, 248) ;
 }
 
+.navbar{
+    background-color: rgb(234, 218, 250);
+}
 li{
-    margin: 0 87px;
+    margin: 0 74px;
+    font-weight: bold;
+    font-size: 1.5em;
 }
