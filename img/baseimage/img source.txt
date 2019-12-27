@@ -11,3 +11,12 @@ vegetable: https://appadvice.com/app/vegetables-name-learning-card/1287074166
 background: https://pngtree.com/freebackground/park-play-kids-advertising-background_970667.html
 addition: https://www.appannie.com/en/apps/google-play/app/com.eggrollgames.matchmathadditionfree/
 subtraction: https://appadvice.com/app/math-subtraction-for-kids-game/1438101300
+alphabet: https://www.amazon.com/Little-Wigwam-Alphabet-Chart-Educational/dp/B00SQ55WFY
+p-1: https://www.tasmeemme.com/en/store-items/letter-p-lowercase-tracing-flashcard-of-pig-for-kids-learning-english-vocabulary-and-handwriting/?item=1088532346
+p-2: https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjL3cLz7dPmAhXTXCsKHShFCD8QjB16BAgBEAM&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_125103100_stock-vector-letter-p-lowercase-cute-children-colorful-zoo-and-animals-abc-alphabet-tracing-flashcard-of-pelican-.html&psig=AOvVaw2Bjb9-xJBFMQ7xlJHYgov2&ust=1577468275012458
+q: https://www.shutterstock.com/image-vector/letter-q-uppercase-cute-children-colorful-749460418
+d: https://www.colourbox.com/vector/duck-with-d-letter-for-kids-vector-39939862
+b: https://www.pinterest.com/pin/32228953556030869/?lp=true
+a: https://www.vectorstock.com/royalty-free-vector/a-magenta-bright-english-letter-kids-font-vector-20487882
+c: https://www.vectorstock.com/royalty-free-vector/c-green-glossy-bright-english-letter-kids-font-vector-20487887
+
