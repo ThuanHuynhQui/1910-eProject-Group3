@@ -14,10 +14,10 @@ Project title: Kidzone - Online learning website for kids.
              Nguyen Thanh Nhat Quang(ntnq996@gmail.com) Student1233871
 ============================
 
-github report link: https://github.com/ThuanHuynhQui/1910-eProject-Group3
+github report link: https://github.com/ThuanHuynhQui/1910-eProject-Group3/tree/gh-pages/Documentation
 
 ============================
 
-eProject published at 
+eProject published at: https://thuanhuynhqui.github.io/1910-eProject-Group3/
 
 ============================
