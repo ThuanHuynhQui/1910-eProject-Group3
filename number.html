@@ -17,6 +17,140 @@
             background-size: 100%;
             background-attachment: fixed;
         }
+        section{
+            background-color: rgba(238, 24, 145, 0.733);
+            border-radius: 20px;
+            
+        }
+        #lesson{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .noti{
+            font-size: 3em;
+            background-color: rgb(109, 248, 109);
+            padding: 20px 50px;
+            border-radius: 10px;
+            text-align: cen;
+        }
+        
+        #test{
+            width: 500px;
+            font-size: 0.6em;
+            margin: 0 30%
+        }
+        .questionbox{
+            background-color: white;
+            border: rgb(109, 248, 109) solid 4px;
+            border-radius: 20px;
+            padding: 20px;
+            display: none;
+        }
+        .answer{
+            margin-left: 27%; 
+            border: blue solid 3px; 
+            border-radius: 20px; 
+            width: 100px;
+        }
+        .answer:hover{
+            opacity: 0.8;
+            border-color: tomato;
+        }
+        .question{
+            font-size: 2em;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .btnsubmit{
+            width: 200px;
+            height: 50px;
+            font-size: 1.5em;
+            margin: 0 41%;
+        }
+        .warn{
+            color: red;
+        }
+        .content > img{
+            width: 100%
+        }
+        .content{
+            width: 60%;
+            margin: auto;
+            
+        }
+        #Q1 > ul > button{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            font-size: 2em;
+            border: rgb(132, 132, 255) solid medium;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #Q1 > ul > button:hover{
+            border-color: tomato;
+        }
+        #Q1 > ul > button:focus{
+            border-color: tomato;
+        }
+        #Q1 > ul{
+            width: 50%;
+            margin: 100px 30%;
+        }
+        #Q1 > img{
+            width: 60%;
+            margin: 0 20%;
+        }
+        #Q2 > ul > button{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            font-size: 2em;
+            border: rgb(132, 132, 255) solid medium;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #Q2 > ul > button:hover{
+            border-color: tomato;
+        }
+        #Q2 > ul > button:focus{
+            border-color: tomato;
+        }
+        #Q2 > ul{
+            width: 50%;
+            margin: 30px 30%;
+        }
+        #Q2 > img{
+            width: 60%;
+            margin: 0 20%;
+        }
+        #Q3 > ul > button{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            font-size: 2em;
+            border: rgb(132, 132, 255) solid medium;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #Q3 > ul > button:hover{
+            border-color: tomato;
+        }
+        #Q3 > ul > button:focus{
+            border-color: tomato;
+        }
+        #Q3 > ul{
+            width: 50%;
+            margin: 30px 25%;
+        }
+        #Q3 > img{
+            width: 60%;
+            margin: 0 20%;
+        }
     </style>
 </head>
 
@@ -38,7 +172,54 @@
         </div>
     
         <section>
-            
+            <div class="noti">
+                <p id="notitop">Let's learn about numbers!!!</p>
+            </div>
+            <div class="content">
+                <img src="img/1-10.jpg" alt="">
+            </div>
+            <div class="questionbox" id="Q1">
+                <p class="question">Question 1: How many lucky bags are there in the picture?</p>
+                <img src="img/threestar.png" alt="">
+                <br>
+                <ul>
+                    <button id="a1">1</button>
+                    <button id="a2">2</button>
+                    <button id="a3">3</button>
+                </ul>
+                <button class="btn btn-success btnsubmit" id="submit1">Submit</button>
+                <button class="btn btn-success btnsubmit" id="next1" style="display: none;">Next</button>
+            </div>
+            <div class="questionbox" id="Q2">
+                <p class="question">Question 2: How many socks are there in the picture?</p>
+                <img src="img/numberquestion2.jpg" alt="">
+                <br>
+                <ul>
+                    <button id="a14">15</button>
+                    <button id="a15">16</button>
+                    <button id="a17">17</button>
+                </ul>
+                <button class="btn btn-success btnsubmit" id="submit2">Submit</button>
+                <button class="btn btn-success btnsubmit" id="next2" style="display: none;">Next</button>
+            </div>
+            <div class="questionbox" id="Q3">
+                <p class="question">Question 3: How many eggs are there in the picture?</p>
+                <img src="img/numberquestion3.jpg" alt="">
+                <br>
+                <ul>
+                    <button id="a16">14</button>
+                    <button id="a18">18</button>
+                    <button id="a19">19</button>
+                    <button id="a20">20</button>
+                </ul>
+                <button class="btn btn-success btnsubmit" id="submit2">Submit</button>
+                <button class="btn btn-success btnsubmit" id="next2" style="display: none;">Next</button>
+            </div>
+            <div class="noti" id="notibot">
+                Are you ready? Let's go to the next part!!!
+                <br>
+                <button class="btn btn-warning" id="test">Test your memmory</button>
+            </div>
         </section>
         <footer>
             Copyright &copy; 2019 Kidzone. All Rights Reserved.

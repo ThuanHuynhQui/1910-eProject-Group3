@@ -45,7 +45,7 @@
             border: rgb(109, 248, 109) solid 4px;
             border-radius: 20px;
             padding: 20px;
-            
+            display: none;
         }
         .answer{
             margin-left: 27%; 
@@ -72,11 +72,13 @@
             color: red;
         }
         .content > img{
-            width: 100%
+            width: 100%;
+            border-radius: 10px;
         }
         .content{
-            width: 60%;
+            width: 100%;
             margin: auto;
+            
             
         }
         #Q1 > ul > button{
@@ -97,15 +99,15 @@
         }
         #Q1 > ul{
             width: 50%;
-            margin: 100px 30%;
+            margin: 70px 30%;
         }
         #Q1 > img{
-            width: 60%;
-            margin: 0 20%;
+            width: 30%;
+            margin: 0 35%;
         }
         #Q2 > ul > button{
             display: inline-block;
-            width: 300px;
+            width: 100px;
             height: 100px;
             margin: 10px;
             font-size: 2em;
@@ -120,8 +122,8 @@
             border-color: tomato;
         }
         #Q2 > ul{
-            width: 100%;
-            margin: 30px 2%;
+            width: 50%;
+            margin: 30px 30%;
         }
         #Q2 > img{
             width: 60%;
@@ -129,7 +131,7 @@
         }
         #Q3 > ul > button{
             display: inline-block;
-            width: 400px;
+            width: 150px;
             height: 100px;
             margin: 10px;
             font-size: 2em;
@@ -144,8 +146,8 @@
             border-color: tomato;
         }
         #Q3 > ul{
-            width: 60%;
-            margin: 30px 28%;
+            width: 80%;
+            margin: 30px 15%;
         }
         #Q3 > img{
             width: 60%;
@@ -173,22 +175,47 @@
     
         <section>
             <div class="noti">
-                <p id="notitop">Let's learn about numbers!!!</p>
+                <p id="notitop">Animal is a greatest gift of Mother natural for us</p>
             </div>
             <div class="content">
-                <img src="img/colorlesson.png" alt="">
+                <img src="img/animallesson.jpg" alt="">
             </div>
             <div class="questionbox" id="Q1">
-                <p class="question">Question 1: What is the color of the flower?</p>
-                <img src="img/colorquestion1.jpg" alt="">
+                <p class="question">Question 1: What is this friendly guy's name?</p>
+                <img src="img/animalquestion1.png" alt="">
                 <br>
                 <ul>
-                    <button id="a1">Blue</button>
-                    <button id="a2">Red</button>
-                    <button id="a3">Yellow</button>
+                    <button id="a1">Dog</button>
+                    <button id="a2">Cat</button>
+                    <button id="a3">Sheep</button>
                 </ul>
                 <button class="btn btn-success btnsubmit" id="submit1">Submit</button>
                 <button class="btn btn-success btnsubmit" id="next1" style="display: none;">Next</button>
+            </div>
+            <div class="questionbox" id="Q2">
+                <p class="question">Question 2:</p>
+                <img src="img/animalquestion2.jpg" alt="">
+                <br>
+                <ul>
+                    <button id="a4">o</button>
+                    <button id="a5">i</button>
+                    <button id="a6">a</button>
+                </ul>
+                <button class="btn btn-success btnsubmit" id="submit2">Submit</button>
+                <button class="btn btn-success btnsubmit" id="next2" style="display: none;">Next</button>
+            </div>
+            <div class="questionbox" id="Q3">
+                <p class="question">Question 3: Which animals are in the picture? (Multiple answer)</p>
+                <img src="img/animalquestion3.png" alt="">
+                <br>
+                <ul>
+                    <button id="a7">Dog</button>
+                    <button id="a8">Cat</button>
+                    <button id="a9">Sheep</button>
+                    <button id="a10">Chicken</button>
+                </ul>
+                <button class="btn btn-success btnsubmit" id="submit3">Submit</button>
+                <button class="btn btn-success btnsubmit" id="next3" style="display: none;">Next</button>
             </div>
             <div class="noti" id="notibot">
                 Are you ready? Let's go to the next part!!!
