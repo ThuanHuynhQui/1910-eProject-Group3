@@ -89,7 +89,7 @@
         #Q2 > ul{
             margin: 0 20%;
         }
-        #answer3a, #answer3b, #answer3c, #answer3d{
+        #a3a, #a3b, #a3c, #a3d{
             width: 15%;
             margin: 4.7%;
             border: darkgray solid 4px;
@@ -98,7 +98,7 @@
         #Q3 > button > img {
             width: 100%;
         }
-        #answer3a:hover, #answer3b:hover, #answer3c:hover, #answer3d:hover{
+        #a3a:hover, #a3b:hover, #a3c:hover, #a3d:hover{
             border-color: rgb(38, 113, 253);
         }
         #result{
@@ -159,8 +159,8 @@
                 <p class="question">Question 1: Which letter between 'A' and 'C' ?</p>
                 <img src="img/question1.jpg" alt="question1" style="width: 60%; margin: 0 20%;">
                 <br>
-                <img src="img/b-2.png" alt="answer1" class="answer" id="answer1">
-                <img src="img/d.jpg" alt="answer2" class="answer" id="answer2">
+                <img src="img/b-2.png" alt="a1" class="answer" id="a1">
+                <img src="img/d.jpg" alt="a2" class="answer" id="a2">
                 <br>
                 <button class="btn btn-success btnsubmit" id="submit1">Submit</button>
                 <button class="btn btn-success btnsubmit" id="next1" style="display: none;">Next</button>
@@ -201,10 +201,10 @@
             </div>
             <div id="Q3" class="questionbox">
                 <p class="question">Question 3: Find all the 'P' letters:</p>
-                <button id="answer3a"><img src="img/p-1.jpg" alt=""></button>
-                <button id="answer3b"><img src="img/q.jpg" alt=""></button>
-                <button id="answer3c"><img src="img/p-2.jpg" alt=""></button>
-                <button id="answer3d"><img src="img/b.jpg" alt=""></button>
+                <button id="a3a"><img src="img/p-1.jpg" alt=""></button>
+                <button id="a3b"><img src="img/q.jpg" alt=""></button>
+                <button id="a3c"><img src="img/p-2.jpg" alt=""></button>
+                <button id="a3d"><img src="img/b.jpg" alt=""></button>
                 <br>
                 <button class="btn btn-success btnsubmit" id="submit3">Submit</button>
                 <button class="btn btn-success btnsubmit" id="next3" style="display: none;">Next</button>
@@ -241,21 +241,21 @@
         var applause = new Audio("audio/applause.wav");
         var star = 0;
         //question 1
-        var answer1;
-        $("#answer1").click(function(){
-            $("#answer1").css("border-color","tomato");
-            $("#answer2").css("border-color","blue");
-            answer1 = 1;
+        var a1;
+        $("#a1").click(function(){
+            $("#a1").css("border-color","tomato");
+            $("#a2").css("border-color","blue");
+            a1 = 1;
         });
-        $("#answer2").click(function(){
-            $("#answer1").css("border-color","blue");
-            $("#answer2").css("border-color","tomato");
-            answer1 = 0;
+        $("#a2").click(function(){
+            $("#a1").css("border-color","blue");
+            $("#a2").css("border-color","tomato");
+            a1 = 0;
         });
 
         $("#submit1").click(function(){
             $("#submit1").off("click");
-            if(answer1 == 1){
+            if(a1 == 1){
                 success.play();
                 $("#notitop").html("Good job!!!");
                 $("#notitop").css("color","black");
@@ -266,12 +266,12 @@
                     $("#notitop").html("Next!!!");
                 },2000);
             }
-            else if(answer1 == 0){
+            else if(a1 == 0){
                 fail.play();
                 $("#notitop").html("Awww! That's incorrect");
                 $("#notitop").css("color","black");
-                $("#answer1, #answer2").off("click");
-                $("#answer1").css("border-color","yellow");
+                $("#a1, #a2").off("click");
+                $("#a1").css("border-color","yellow");
                 $("#submit1").css("display", "none");
                 $("#next1").css("display", "block");
             }
@@ -290,16 +290,16 @@
             $("#notitop").html("Next!!!");
         })
         //question 2
-        var answer2;
+        var a2;
         $("#T").click(function(){
-            answer2 = 1;
+            a2 = 1;
         });
         $("#A,#B,#C,#D,#E,#F,#G,#H,#I,#J,#K,#L,#M,#N,#O,#P,#Q,#R,#S,#U,#V,#W,#X,#Y,#Z").click(function(){
-            answer2 = 0;
+            a2 = 0;
         });
         $("#submit2").click(function(){
             $("#submit2").off("click");
-            if(answer2 == 1){
+            if(a2 == 1){
                 success.play();
                 $("#notitop").html("Correct!!!");
                 $("#notitop").css("color","black");
@@ -310,7 +310,7 @@
                     $("#notitop").html("The last question!");
                 },2000);
                     
-            }else if(answer2 == 0){
+            }else if(a2 == 0){
                 fail.play();
                 $("#notitop").html("Awww! That's incorrect");
                 $("#notitop").css("color","black");
@@ -335,50 +335,50 @@
         })
 
         //question 3
-        var answer3a = 0;
-        var answer3b = 0;
-        var answer3c = 0;
-        var answer3d = 0;
+        var a3a = 0;
+        var a3b = 0;
+        var a3c = 0;
+        var a3d = 0;
 
-        $("#answer3a").click(function(){
-            $("#answer3a").css("border-color","rgb(38, 113, 253)");
-            if(answer3a == 1){
-                answer3a = 0;
-                $("#answer3a").css("border-color","darkgray");
+        $("#a3a").click(function(){
+            $("#a3a").css("border-color","rgb(38, 113, 253)");
+            if(a3a == 1){
+                a3a = 0;
+                $("#a3a").css("border-color","darkgray");
             }else{
-                answer3a = 1;
+                a3a = 1;
             }
         });   
-        $("#answer3b").click(function(){
-            $("#answer3b").css("border-color","rgb(38, 113, 253)");
-            if(answer3b == 1){
-                answer3b = 0;
-                $("#answer3b").css("border-color","darkgray");
+        $("#a3b").click(function(){
+            $("#a3b").css("border-color","rgb(38, 113, 253)");
+            if(a3b == 1){
+                a3b = 0;
+                $("#a3b").css("border-color","darkgray");
             }else{
-                answer3b = 1;
+                a3b = 1;
             }
         }); 
-        $("#answer3c").click(function(){
-            $("#answer3c").css("border-color","rgb(38, 113, 253)");
-            if(answer3c == 1){
-                answer3c = 0;
-                $("#answer3c").css("border-color","darkgray");
+        $("#a3c").click(function(){
+            $("#a3c").css("border-color","rgb(38, 113, 253)");
+            if(a3c == 1){
+                a3c = 0;
+                $("#a3c").css("border-color","darkgray");
             }else{
-                answer3c = 1;
+                a3c = 1;
             }
         }); 
-        $("#answer3d").click(function(){
-            $("#answer3d").css("border-color","rgb(38, 113, 253)");
-            if(answer3d == 1){
-                answer3d = 0;
-                $("#answer3d").css("border-color","darkgray");
+        $("#a3d").click(function(){
+            $("#a3d").css("border-color","rgb(38, 113, 253)");
+            if(a3d == 1){
+                a3d = 0;
+                $("#a3d").css("border-color","darkgray");
             }else{
-                answer3d = 1;
+                a3d = 1;
             }
         }); 
         $("#submit3").click(function(){
             $("#submit3").off("click");
-            if(answer3a == 1 && answer3c == 1 && answer3b == 0 && answer3d==0){
+            if(a3a == 1 && a3c == 1 && a3b == 0 && a3d==0){
                 success.play();
                 $("#notitop").html("That's right!!!");
                 $("#notitop").css("color","black");
@@ -402,7 +402,7 @@
                     }
                 },2000);
             }
-            else if(answer3a == 0 && answer3c == 0 && answer3b == 0 && answer3d==0){
+            else if(a3a == 0 && a3c == 0 && a3b == 0 && a3d==0){
                 warning.play();
                 $("#notitop").html("You haven't choose an answer yet!");
                 $("#notitop").addClass("warn");
@@ -414,9 +414,9 @@
                 fail.play();
                 $("#notitop").html("Awww! That's incorrect");
                 $("#notitop").css("color","black");
-                $("#answer3a, #answer3b, #answer3c, #answer3d").off("click");
-                $("#answer3a, #answer3b, #answer3c, #answer3d").css("border-color","darkgray")
-                $("#answer3a, #answer3c").css("border-color","yellow");
+                $("#a3a, #a3b, #a3c, #a3d").off("click");
+                $("#a3a, #a3b, #a3c, #a3d").css("border-color","darkgray")
+                $("#a3a, #a3c").css("border-color","yellow");
                 $("#submit3").css("display", "none");
                 $("#next3").css("display", "block");
             }
