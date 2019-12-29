@@ -18,13 +18,13 @@
             background-attachment: fixed;
         }
         section{
-            background-color: rgba(238, 24, 145, 0.733);
             border-radius: 20px;
-            
+            background-color: rgb(113, 214, 82);
         }
         #lesson{
             width: 100%;
             border-radius: 10px;
+            
         }
 
         .noti{
@@ -73,11 +73,12 @@
         }
         .content > img{
             width: 100%
+            
         }
         .content{
             width: 60%;
             margin: auto;
-            
+            opacity: 0.9;
         }
         #Q1 > ul > button{
             display: inline-block;
@@ -97,11 +98,11 @@
         }
         #Q1 > ul{
             width: 50%;
-            margin: 100px 30%;
+            margin: 50px 30%;
         }
         #Q1 > img{
-            width: 60%;
-            margin: 0 20%;
+            width: 40%;
+            margin: 0 30%;
         }
         #Q2 > ul > button{
             display: inline-block;
@@ -124,8 +125,8 @@
             margin: 30px 30%;
         }
         #Q2 > img{
-            width: 60%;
-            margin: 0 20%;
+            width: 50%;
+            margin: 0 25%;
         }
         #Q3 > ul > button{
             display: inline-block;
@@ -144,8 +145,8 @@
             border-color: tomato;
         }
         #Q3 > ul{
-            width: 50%;
-            margin: 30px 25%;
+            width: 60%;
+            margin: 30px 30%;
         }
         #Q3 > img{
             width: 60%;
@@ -200,44 +201,43 @@
     
         <section>
             <div class="noti">
-                <p id="notitop">Let's learn about numbers!!!</p>
+                <p id="notitop">Do you know how to plus?</p>
             </div>
             <div class="content">
-                <img src="img/1-10.jpg" alt="">
+                <img src="img/subtractionlesson.png" alt="">
             </div>
             <div class="questionbox" id="Q1">
-                <p class="question">Question 1: How many pair of lucky bags are there in the picture?</p>
-                <img src="img/threestar.png" alt="">
+                <p class="question">Question 1: You have 5 cookies, you eat one of them, how many you have left?</p>
+                <img src="img/subtractionquestion1.png" alt="">
                 <br>
                 <ul>
-                    <button id="a1">1</button>
-                    <button id="a2">2</button>
-                    <button id="a3">3</button>
+                    <button id="a1">3</button>
+                    <button id="a2">5</button>
+                    <button id="a3">4</button>
                 </ul>
                 <button class="btn btn-success btnsubmit" id="submit1">Submit</button>
                 <button class="btn btn-success btnsubmit" id="next1" style="display: none;">Next</button>
             </div>
             <div class="questionbox" id="Q2">
-                <p class="question">Question 2: How many socks are there in the picture?</p>
-                <img src="img/numberquestion2.jpg" alt="">
+                <p class="question">Question 2: EIGHT apples are on the tree, THREE fall down, how many apples are on the tree now?</p>
+                <img src="img/subtractionquestion2.png" alt="">
                 <br>
                 <ul>
-                    <button id="a4">15</button>
-                    <button id="a5">16</button>
-                    <button id="a6">17</button>
+                    <button id="a4">7</button>
+                    <button id="a5">5</button>
+                    <button id="a6">6</button>
                 </ul>
                 <button class="btn btn-success btnsubmit" id="submit2">Submit</button>
                 <button class="btn btn-success btnsubmit" id="next2" style="display: none;">Next</button>
             </div>
             <div class="questionbox" id="Q3">
-                <p class="question">Question 3: How many eggs are there in the picture?</p>
-                <img src="img/numberquestion3.jpg" alt="">
+                <p class="question">Question 3: FIVE birds are on the tree, ONE fly away, how many left?</p>
+                <img src="img/subtractionquestion3.jpg" alt="">
                 <br>
                 <ul>
-                    <button id="a7">14</button>
-                    <button id="a8">18</button>
-                    <button id="a9">19</button>
-                    <button id="a10">20</button>
+                    <button id="a7">5</button>
+                    <button id="a8">3</button>
+                    <button id="a9">4</button>
                 </ul>
                 <button class="btn btn-success btnsubmit" id="submit3">Submit</button>
                 <button class="btn btn-success btnsubmit" id="next3" style="display: none;">Next</button>
@@ -249,9 +249,9 @@
                 <p id="resultbox"></p>
             </div>
             <div class="noti" id="notibot">
-                Are you ready? Let's go to the next part!!!
+                Now you've known how to plus, let's do some MATH!
                 <br>
-                <button class="btn btn-warning" id="test">Test your memmory</button>
+                <button class="btn btn-warning" id="test">Math</button>
             </div>
         </section>
         <footer>
@@ -275,7 +275,7 @@
 
         //question1
         var result1;
-        $("#a1, #a2").click(function(){
+        $("#a2, #a1").click(function(){
             result1 = 0;
         });
         $("#a3").click(function(){
@@ -320,10 +320,10 @@
         
         //question 2
         var result2;
-        $("#a5, #a6").click(function(){
+        $("#a4, #a6").click(function(){
             result2 = 0;
         });
-        $("#a4").click(function(){
+        $("#a5").click(function(){
             result2 = 1;
         });
         $("#submit2").click(function(){
@@ -344,7 +344,7 @@
                 $("#notitop").html("Awww! So close.");
                 $("#notitop").css("color","black");
                 $("#a4, #a5, #a6").off("click");
-                $("#a4").css("border-color","yellow");
+                $("#a5").css("border-color","yellow");
                 $("#submit2").css("display", "none");
                 $("#next2").css("display", "block");
             }
@@ -365,10 +365,10 @@
         
         //question 3
         var result3;
-        $("#a7, #a9, #a10").click(function(){
+        $("#a7, #a8").click(function(){
             result3 = 0;
         });
-        $("#a8").click(function(){
+        $("#a9").click(function(){
             result3 = 1;
         });
         $("#submit3").click(function(){
@@ -401,8 +401,8 @@
                 fail.play();
                 $("#notitop").html("Awww! That's incorrect");
                 $("#notitop").css("color","black");
-                $("#a7, #a8, #a9, #a10").off("click");
-                $("#a8").css("border-color", "yellow");
+                $("#a7, #a8, #a9").off("click");
+                $("#a9").css("border-color", "yellow");
                 $("#submit3").css("display", "none");
                 $("#next3").css("display", "block");
             }
