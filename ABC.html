@@ -116,7 +116,7 @@
             margin: 0 36%;
         }
         #threestar{
-            margin: 0 20%;
+            margin: 0 38%;
         }
         #onestar,#twostar,#threestar{
             display: none;
@@ -127,6 +127,14 @@
             margin: auto;
             text-align: center;
             background-color: rgba(255, 248, 220, 0.76);
+        }
+        .backlesson{
+            width: 200px;
+            background-color: rgb(51, 230, 27);
+            border-color: rgb(51, 230, 27);
+            position: relative;
+            left: 40%;
+            top: 150px;
         }
     </style>
 </head>
@@ -214,6 +222,7 @@
                 <img src="img/twostar.png" alt="" id="twostar">
                 <img src="img/threestar.png" alt="" id="threestar">
                 <p id="resultbox"></p>
+                <a href="lesson.html" class="backlesson btn btn-warning">Back to lesson</a>
             </div>
             
             <div class="noti" id="notibot">
@@ -254,8 +263,8 @@
         });
 
         $("#submit1").click(function(){
-            $("#submit1").off("click");
             if(a1 == 1){
+                $("#submit1").off("click");
                 success.play();
                 $("#notitop").html("Good job!!!");
                 $("#notitop").css("color","black");
@@ -298,8 +307,8 @@
             a2 = 0;
         });
         $("#submit2").click(function(){
-            $("#submit2").off("click");
             if(a2 == 1){
+                $("#submit2").off("click");
                 success.play();
                 $("#notitop").html("Correct!!!");
                 $("#notitop").css("color","black");
@@ -377,8 +386,9 @@
             }
         }); 
         $("#submit3").click(function(){
-            $("#submit3").off("click");
+            
             if(a3a == 1 && a3c == 1 && a3b == 0 && a3d==0){
+                $("#submit3").off("click");
                 success.play();
                 $("#notitop").html("That's right!!!");
                 $("#notitop").css("color","black");
