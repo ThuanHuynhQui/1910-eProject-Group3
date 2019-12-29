@@ -232,7 +232,7 @@
                 <button class="btn btn-success btnsubmit" id="next2" style="display: none;">Next</button>
             </div>
             <div class="questionbox" id="Q3">
-                <p class="question">Question 3: What is the 7th month of the year called?<br>(Fill the empty space)
+                <p class="question">Question 3: What is the first month of the year?
                 </p>
                 
                 <img src="img/monthquestion3.jpg" alt="">
@@ -285,8 +285,8 @@
             result1 = 1;
         });
         $("#submit1").click(function(){
-            $("#submit1").off("click");
             if(result1 == 1){
+                $("#submit1").off("click");
                 success.play();
                 $("#notitop").html("Nice one!!!");
                 $("#notitop").css("color","black");
@@ -330,8 +330,8 @@
             result2 = 1;
         });
         $("#submit2").click(function(){
-            $("#submit2").off("click");
             if(result2 == 1){
+                $("#submit2").off("click");
                 success.play();
                 $("#notitop").html("PERFECT!!");
                 $("#notitop").css("color","black");
@@ -375,8 +375,8 @@
             result3 = 1;
         });
         $("#submit3").click(function(){
-            $("#submit3").off("click");
             if(result3 == 1){
+                $("#submit3").off("click");
                 success.play();
                 $("#notitop").html("That's right!!!");
                 $("#notitop").css("color","black");

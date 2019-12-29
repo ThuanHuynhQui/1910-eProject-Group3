@@ -20,11 +20,12 @@
         section{
             background-color: rgba(255, 255, 255, 0.849);
             border-radius: 20px;
-            
+            background-color: rgb(255, 255, 182);
         }
         #lesson{
             width: 100%;
             border-radius: 10px;
+            
         }
 
         .noti{
@@ -46,6 +47,9 @@
             border-radius: 20px;
             padding: 20px;
             display: none;
+        }
+        .imgans{
+            width: 100%;
         }
         .answer{
             margin-left: 27%; 
@@ -73,16 +77,17 @@
         }
         .content > img{
             width: 100%
+            
         }
         .content{
             width: 60%;
             margin: auto;
-            
+            opacity: 0.9;
         }
         #Q1 > ul > button{
             display: inline-block;
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             margin: 10px;
             font-size: 2em;
             border: rgb(132, 132, 255) solid medium;
@@ -96,8 +101,8 @@
             border-color: tomato;
         }
         #Q1 > ul{
-            width: 50%;
-            margin: 100px 30%;
+            width: 100%;
+            margin: 50px 23%;
         }
         #Q1 > img{
             width: 60%;
@@ -106,7 +111,7 @@
         #Q2 > ul > button{
             display: inline-block;
             width: 300px;
-            height: 100px;
+            height: 250px;
             margin: 10px;
             font-size: 2em;
             border: rgb(132, 132, 255) solid medium;
@@ -129,7 +134,7 @@
         }
         #Q3 > ul > button{
             display: inline-block;
-            width: 400px;
+            width: 150px;
             height: 100px;
             margin: 10px;
             font-size: 2em;
@@ -145,11 +150,38 @@
         }
         #Q3 > ul{
             width: 60%;
-            margin: 30px 28%;
+            margin: 30px 23%;
         }
         #Q3 > img{
             width: 60%;
             margin: 0 20%;
+        }
+        #result{
+            background-image: url("img/resultbackground.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 500px;
+            display: none;
+            padding: 50px;
+        }
+        #onestar{
+            margin: 0 45%;
+        }
+        #twostar{
+            margin: 0 36%;
+        }
+        #threestar{
+            margin: 0 20%;
+        }
+        #onestar,#twostar,#threestar{
+            display: none;
+        }
+        #resultbox{
+            font-size: 2em;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            background-color: rgba(255, 248, 220, 0.76);
         }
     </style>
 </head>
@@ -179,19 +211,49 @@
                 <img src="img/additionlesson.jpg" alt="">
             </div>
             <div class="questionbox" id="Q1">
-                <p class="question">Question 1: What is the color of the flower?</p>
-                <img src="img/colorquestion1.jpg" alt="">
+                <p class="question">Question 1: How many apples in total?</p>
+                <img src="img/additionquestion1.png" alt="">
                 <br>
                 <ul>
-                    <button id="a1">Blue</button>
-                    <button id="a2">Red</button>
-                    <button id="a3">Yellow</button>
+                    <button id="a1"><img src="img/additionanswer1a.png" alt="" class="imgans"></button>
+                    <button id="a2"><img src="img/additionanswer1b.png" alt="" class="imgans"></button>
+                    <button id="a3"><img src="img/additionanswer1c.png" alt="" class="imgans"></button>
                 </ul>
                 <button class="btn btn-success btnsubmit" id="submit1">Submit</button>
                 <button class="btn btn-success btnsubmit" id="next1" style="display: none;">Next</button>
             </div>
+            <div class="questionbox" id="Q2">
+                <p class="question">Question 2: How many flowers in total?</p>
+                <img src="img/additionquestion2.jpg" alt="">
+                <br>
+                <ul>
+                    <button id="a4"><img src="img/additionanswer2a.png" alt="" class="imgans"></button>
+                    <button id="a5"><img src="img/additionanswer2b.png" alt="" class="imgans"></button>
+                    <button id="a6"><img src="img/additionanswer2c.png" alt="" class="imgans"></button>
+                </ul>
+                <button class="btn btn-success btnsubmit" id="submit2">Submit</button>
+                <button class="btn btn-success btnsubmit" id="next2" style="display: none;">Next</button>
+            </div>
+            <div class="questionbox" id="Q3">
+                <p class="question">Question 3: You have 1 cookie, mom makes 6 more, how many do you have now?</p>
+                <img src="img/additionquestion3.jpg" alt="">
+                <br>
+                <ul>
+                    <button id="a7">7</button>
+                    <button id="a8">9</button>
+                    <button id="a9">6</button>
+                </ul>
+                <button class="btn btn-success btnsubmit" id="submit3">Submit</button>
+                <button class="btn btn-success btnsubmit" id="next3" style="display: none;">Next</button>
+            </div>
+            <div id="result">
+                <img src="img/onestar.png" alt="" id="onestar">
+                <img src="img/twostar.png" alt="" id="twostar">
+                <img src="img/threestar.png" alt="" id="threestar">
+                <p id="resultbox"></p>
+            </div>
             <div class="noti" id="notibot">
-                Now you've known how to plus, let's make some MATH!
+                Now you've known how to plus, let's do some MATH!
                 <br>
                 <button class="btn btn-warning" id="test">Math</button>
             </div>
@@ -201,5 +263,180 @@
         </footer>
     </div>
 </body>
+<script>
+    $(document).ready(function(){
+        $("#test").click(function(){
+            $("#notitop").html("Let's do it!!!");
+            $("#notibot").css("display", "none");
+            $(".content").css("display", "none");
+            $("#Q1").css("display","block");
+        });
+        var success = new Audio("audio/success.wav");
+        var fail = new Audio("audio/false.wav");
+        var warning = new Audio("audio/warning.wav");
+        var applause = new Audio("audio/applause.wav");
+        var star = 0;
 
+        //question1
+        var result1;
+        $("#a2, #a3").click(function(){
+            result1 = 0;
+        });
+        $("#a1").click(function(){
+            result1 = 1;
+        });
+        $("#submit1").click(function(){
+            if(result1 == 1){
+                $("#submit1").off("click");
+                success.play();
+                $("#notitop").html("Nice one!!!");
+                $("#notitop").css("color","black");
+                star++;
+                setTimeout(function(){
+                    $("#Q1").css("display","none");
+                    $("#Q2").css("display","block");
+                    $("#notitop").html("Next!!!");
+                },2000);
+            }
+            else if(result1 == 0){
+                fail.play();
+                $("#notitop").html("Awww! So close.");
+                $("#notitop").css("color","black");
+                $("#a1, #a2, #a3").off("click");
+                $("#a1").css("border-color","yellow");
+                $("#submit1").css("display", "none");
+                $("#next1").css("display", "block");
+            }
+            else {
+                warning.play();
+                $("#notitop").html("You haven't choose an answer yet!");
+                $("#notitop").addClass("warn");
+                setTimeout(function(){
+                    $("#notitop").removeClass("warn");
+                },100);
+            }
+        });
+        $("#next1").click(function(){
+            $("#Q1").css("display","none");
+            $("#Q2").css("display","block");
+            $("#notitop").html("Next!!!");
+        });
+        
+        //question 2
+        var result2;
+        $("#a4, #a6").click(function(){
+            result2 = 0;
+        });
+        $("#a5").click(function(){
+            result2 = 1;
+        });
+        $("#submit2").click(function(){
+            if(result2 == 1){
+                $("#submit2").off("click");
+                success.play();
+                $("#notitop").html("PERFECT!!");
+                $("#notitop").css("color","black");
+                star++;
+                setTimeout(function(){
+                    $("#Q2").css("display","none");
+                    $("#Q3").css("display","block");
+                    $("#notitop").html("Question 3:");
+                },2000);
+            }
+            else if(result2 == 0){
+                fail.play();
+                $("#notitop").html("Awww! So close.");
+                $("#notitop").css("color","black");
+                $("#a4, #a5, #a6").off("click");
+                $("#a5").css("border-color","yellow");
+                $("#submit2").css("display", "none");
+                $("#next2").css("display", "block");
+            }
+            else {
+                warning.play();
+                $("#notitop").html("You haven't choose an answer yet!");
+                $("#notitop").addClass("warn");
+                setTimeout(function(){
+                    $("#notitop").removeClass("warn");
+                },100);
+            }
+        });
+        $("#next2").click(function(){
+            $("#Q2").css("display","none");
+            $("#Q3").css("display","block");
+            $("#notitop").html("Question 3:");
+        });
+        
+        //question 3
+        var result3;
+        $("#a9, #a8").click(function(){
+            result3 = 0;
+        });
+        $("#a7").click(function(){
+            result3 = 1;
+        });
+        $("#submit3").click(function(){
+            if(result3 == 1){
+                $("#submit3").off("click");
+                success.play();
+                $("#notitop").html("That's right!!!");
+                $("#notitop").css("color","black");
+                star++;
+                setTimeout(function(){
+                    applause.play();
+                    $("#Q3").css("display","none");
+                    $("#result").css("display","block");
+                    $("#notitop").html("Result:");
+                    if(star == 1){
+                        $("#onestar").css("display","block");
+                        $("#resultbox").html("You got one lucky bag, better luck next time!!");
+                    }else if(star == 2){
+                        $("#twostar").css("display","block");
+                        $("#resultbox").html("You got two lucky bags, not bad at all!!");
+                    }else if(star == 3){
+                        $("#threestar").css("display","block");
+                        $("#resultbox").html("You got three lucky bags, that was impressive!!!");
+                    }else{
+                        $("#resultbox").html("You didn't get any lucky bag, maybe just bad luck, let's try again!");
+                    }
+                },2000);
+            }
+            else if(result3 == 0){
+                fail.play();
+                $("#notitop").html("Awww! That's incorrect");
+                $("#notitop").css("color","black");
+                $("#a7, #a8, #a9").off("click");
+                $("#a7").css("border-color", "yellow");
+                $("#submit3").css("display", "none");
+                $("#next3").css("display", "block");
+            }
+            else{
+                warning.play();
+                $("#notitop").html("You haven't choose an answer yet!");
+                $("#notitop").addClass("warn");
+                setTimeout(function(){
+                    $("#notitop").removeClass("warn");
+                },100);
+            }
+        });
+        $("#next3").click(function(){
+            applause.play();
+            $("#Q3").css("display","none");
+            $("#result").css("display","block");
+            $("#notitop").html("Result:");
+            if(star == 1){
+                $("#onestar").css("display","block");
+                $("#resultbox").html("You got one lucky bag, better luck next time!!");
+            }else if(star == 2){
+                $("#twostar").css("display","block");
+                $("#resultbox").html("You got two lucky bags, not bad at all!!");
+            }else if(star == 3){
+                $("#threestar").css("display","block");
+                $("#resultbox").html("You got three lucky bags, that was impressive!!!");
+            }else{
+                        $("#resultbox").html("You didn't get any lucky bag, maybe just bad luck, let's try again!");
+            }
+        });
+    })
+</script>
 </html>
