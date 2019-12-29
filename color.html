@@ -151,6 +151,33 @@
             width: 60%;
             margin: 0 20%;
         }
+        #result{
+            background-image: url("img/resultbackground.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 500px;
+            display: none;
+            padding: 50px;
+        }
+        #onestar{
+            margin: 0 45%;
+        }
+        #twostar{
+            margin: 0 36%;
+        }
+        #threestar{
+            margin: 0 20%;
+        }
+        #onestar,#twostar,#threestar{
+            display: none;
+        }
+        #resultbox{
+            font-size: 2em;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            background-color: rgba(255, 248, 220, 0.76);
+        }
     </style>
 </head>
 
@@ -173,7 +200,7 @@
     
         <section>
             <div class="noti">
-                <p id="notitop">Let's learn about numbers!!!</p>
+                <p id="notitop">Colors of the RAINBOW!!!</p>
             </div>
             <div class="content">
                 <img src="img/colorlesson.png" alt="">
@@ -214,6 +241,12 @@
                 <button class="btn btn-success btnsubmit" id="submit3">Submit</button>
                 <button class="btn btn-success btnsubmit" id="next3" style="display: none;">Next</button>
             </div>
+            <div id="result">
+                <img src="img/onestar.png" alt="" id="onestar">
+                <img src="img/twostar.png" alt="" id="twostar">
+                <img src="img/threestar.png" alt="" id="threestar">
+                <p id="resultbox"></p>
+            </div>
             <div class="noti" id="notibot">
                 Are you ready? Let's go to the next part!!!
                 <br>
@@ -225,5 +258,180 @@
         </footer>
     </div>
 </body>
+<script>
+    $(document).ready(function(){
+        $("#test").click(function(){
+            $("#notitop").html("Let's do it!!!");
+            $("#notibot").css("display", "none");
+            $(".content").css("display", "none");
+            $("#Q1").css("display","block");
+        });
+        var success = new Audio("audio/success.wav");
+        var fail = new Audio("audio/false.wav");
+        var warning = new Audio("audio/warning.wav");
+        var applause = new Audio("audio/applause.wav");
+        var star = 0;
 
+        //question1
+        var result1;
+        $("#a1, #a3").click(function(){
+            result1 = 0;
+        });
+        $("#a2").click(function(){
+            result1 = 1;
+        });
+        $("#submit1").click(function(){
+            $("#submit1").off("click");
+            if(result1 == 1){
+                success.play();
+                $("#notitop").html("Nice one!!!");
+                $("#notitop").css("color","black");
+                star++;
+                setTimeout(function(){
+                    $("#Q1").css("display","none");
+                    $("#Q2").css("display","block");
+                    $("#notitop").html("Next!!!");
+                },2000);
+            }
+            else if(result1 == 0){
+                fail.play();
+                $("#notitop").html("Awww! So close.");
+                $("#notitop").css("color","black");
+                $("#a1, #a2, #a3").off("click");
+                $("#a2").css("border-color","yellow");
+                $("#submit1").css("display", "none");
+                $("#next1").css("display", "block");
+            }
+            else {
+                warning.play();
+                $("#notitop").html("You haven't choose an answer yet!");
+                $("#notitop").addClass("warn");
+                setTimeout(function(){
+                    $("#notitop").removeClass("warn");
+                },100);
+            }
+        });
+        $("#next1").click(function(){
+            $("#Q1").css("display","none");
+            $("#Q2").css("display","block");
+            $("#notitop").html("Next!!!");
+        });
+        
+        //question 2
+        var result2;
+        $("#a5, #a6").click(function(){
+            result2 = 0;
+        });
+        $("#a4").click(function(){
+            result2 = 1;
+        });
+        $("#submit2").click(function(){
+            $("#submit2").off("click");
+            if(result2 == 1){
+                success.play();
+                $("#notitop").html("PERFECT!!");
+                $("#notitop").css("color","black");
+                star++;
+                setTimeout(function(){
+                    $("#Q2").css("display","none");
+                    $("#Q3").css("display","block");
+                    $("#notitop").html("Question 3:");
+                },2000);
+            }
+            else if(result2 == 0){
+                fail.play();
+                $("#notitop").html("Awww! So close.");
+                $("#notitop").css("color","black");
+                $("#a4, #a5, #a6").off("click");
+                $("#a4").css("border-color","yellow");
+                $("#submit2").css("display", "none");
+                $("#next2").css("display", "block");
+            }
+            else {
+                warning.play();
+                $("#notitop").html("You haven't choose an answer yet!");
+                $("#notitop").addClass("warn");
+                setTimeout(function(){
+                    $("#notitop").removeClass("warn");
+                },100);
+            }
+        });
+        $("#next2").click(function(){
+            $("#Q2").css("display","none");
+            $("#Q3").css("display","block");
+            $("#notitop").html("Question 3:");
+        });
+        
+        //question 3
+        var result3;
+        $("#a8, #a9").click(function(){
+            result3 = 0;
+        });
+        $("#a7").click(function(){
+            result3 = 1;
+        });
+        $("#submit3").click(function(){
+            $("#submit3").off("click");
+            if(result3 == 1){
+                success.play();
+                $("#notitop").html("That's right!!!");
+                $("#notitop").css("color","black");
+                star++;
+                setTimeout(function(){
+                    applause.play();
+                    $("#Q3").css("display","none");
+                    $("#result").css("display","block");
+                    $("#notitop").html("Result:");
+                    if(star == 1){
+                        $("#onestar").css("display","block");
+                        $("#resultbox").html("You got one lucky bag, better luck next time!!");
+                    }else if(star == 2){
+                        $("#twostar").css("display","block");
+                        $("#resultbox").html("You got two lucky bags, not bad at all!!");
+                    }else if(star == 3){
+                        $("#threestar").css("display","block");
+                        $("#resultbox").html("You got three lucky bags, that was impressive!!!");
+                    }else{
+                        $("#resultbox").html("You didn't get any lucky bag, maybe just bad luck, let's try again!");
+                    }
+                },2000);
+            }
+            else if(result3 == 0){
+                fail.play();
+                $("#notitop").html("Awww! That's incorrect");
+                $("#notitop").css("color","black");
+                $("#a7, #a8, #a9").off("click");
+                $("#a7").css("border-color", "yellow");
+                $("#submit3").css("display", "none");
+                $("#next3").css("display", "block");
+            }
+            else{
+                warning.play();
+                $("#notitop").html("You haven't choose an answer yet!");
+                $("#notitop").addClass("warn");
+                setTimeout(function(){
+                    $("#notitop").removeClass("warn");
+                },100);
+            }
+        });
+        $("#next3").click(function(){
+            applause.play();
+            $("#Q3").css("display","none");
+            $("#result").css("display","block");
+            $("#notitop").html("Result:");
+            if(star == 1){
+                $("#onestar").css("display","block");
+                $("#resultbox").html("You got one lucky bag, better luck next time!!");
+            }else if(star == 2){
+                $("#twostar").css("display","block");
+                $("#resultbox").html("You got two lucky bags, not bad at all!!");
+            }else if(star == 3){
+                $("#threestar").css("display","block");
+                $("#resultbox").html("You got three lucky bags, that was impressive!!!");
+            }else{
+                        $("#resultbox").html("You didn't get any lucky bag, maybe just bad luck, let's try again!");
+            }
+        });
+    })
+</script>
 </html>
